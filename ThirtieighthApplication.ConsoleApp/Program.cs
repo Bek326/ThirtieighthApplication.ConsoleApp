@@ -9,7 +9,9 @@ namespace ThirtieighthApplication.ConsoleApp
     {
         static void Main(string[] args)
         {
-            var lines = File.ReadAllLines(@"C:\Users\bekManOfSteal\Downloads\Text1.txt");
+            var str = @"C:\Users\bekManOfSteal\Downloads\Text1.txt";
+            
+            var lines = File.ReadAllText(str);
 
             var noPunctuationText = new string(lines.Where(c => !char.IsPunctuation(c)).ToArray());
 
